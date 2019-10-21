@@ -4,27 +4,20 @@ using namespace std;
 
 vector<string> v;
 
-int main(void)
-{
+int main(void) {
   v.assign(11, "");
   v[0] = "L";
-  for(int i = 2; i <= 10; i++)
-  {
-    for(int j = 0; j < (1<<i)-1; j++)
-    {
-      if(j%2 == 0)
-      {
-        if(j%4 == 0)
-        {
+  for(int i = 2; i <= 10; i++) {
+    for(int j = 0; j < (1<<i)-1; j++) {
+      if(j%2 == 0) {
+        if(j%4 == 0) {
           v[i-1].push_back('L');
         }
-        else
-        {
+        else {
           v[i-1].push_back('R');
         }
       }
-      else
-      {
+      else {
         v[i-1].push_back(v[i-2][(j-1)/2]);
       }
     }
@@ -32,42 +25,33 @@ int main(void)
 
   int T;
   cin >> T;
-  for(int index = 0; index < T; index++)
-  {
+  for(int index = 0; index < T; index++) {
     int n;
     string s;
     cin >> n >> s;
 
     bool outcome = false;
-    if(n < 10)
-    {
-      for(int i = 0; i <= v[n-1].size()-s.size(); i++)
-      {
-        if(s.compare(v[n-1].substr(i, s.size())) == 0)
-        {
+    if(n < 10) {
+      for(int i = 0; i <= v[n-1].size()-s.size(); i++) {
+        if(s.compare(v[n-1].substr(i, s.size())) == 0) {
           outcome = true;
           break;
         }
       }
     }
-    else
-    {
-      for(int i = 0; i <= v[9].size()-s.size(); i++)
-      {
-        if(s.compare(v[9].substr(i, s.size())) == 0)
-        {
+    else {
+      for(int i = 0; i <= v[9].size()-s.size(); i++) {
+        if(s.compare(v[9].substr(i, s.size())) == 0) {
           outcome = true;
           break;
         }
       }
     }
 
-    if(outcome)
-    {
+    if(outcome) {
       cout << "Case " << index+1 << ": Yes" << endl;
     }
-    else
-    {
+    else {
       cout << "Case " << index+1 << ": No" << endl;
     }
   }

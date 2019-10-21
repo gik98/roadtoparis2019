@@ -8,11 +8,11 @@ Gara di selezione per SWERC 2019/2020 @ DISI, Università di Trento; 4 novembre 
 
 [Problem on Kattis](https://open.kattis.com/problems/alldifferentdirections)
 
-Solution: TODO
+[See solution](alldifferentdirections.cpp)
 
 ### Problem discussion
 
-TODO
+Just simulate the movements using the appropriate trigonometric formulas.
 
 ## B - Decoding The Hallway
 
