@@ -43,17 +43,7 @@ Start with the lowest value of *x* possible - which is ceil(m / (n * 2)). Actual
 Compute the maximum flow; if the flow value is lower than n * 2 than increment *x* by one and repeat.
 Otherwise you found an acceptable assignment.
 
-## D - In Flagrante Delicto
-
-[Problem on Kattis](https://open.kattis.com/problems/inflagrantedelicto)
-
-Solution: TODO
-
-### Problem discussion
-
-TODO
-
-## E - Lost In Translation
+## D - Lost In Translation
 
 [Problem on Kattis](https://open.kattis.com/problems/lost)
 
@@ -70,12 +60,12 @@ Finally, print the sum of the verteces of the resulting treefind a cheapest conn
 
 Finally, print the sum of the verteces of the resulting tree.
 
-# F - Wedding
+# E - Aaah!
 
-[Problem on Kattis](https://open.kattis.com/problems/wedding)
+[Problem on Kattis](https://open.kattis.com/problems/aaah)
 
-Solution: TODO
+[See solution](aaah.cpp)
 
 ### Problem discussion
 
-TODO
+Compare the lengths of the two strings.
