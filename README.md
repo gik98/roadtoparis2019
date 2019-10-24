@@ -60,7 +60,7 @@ Finally, print the sum of the verteces of the resulting treefind a cheapest conn
 
 Finally, print the sum of the verteces of the resulting tree.
 
-# E - Aaah!
+## E - Aaah!
 
 [Problem on Kattis](https://open.kattis.com/problems/aaah)
 
@@ -69,3 +69,6 @@ Finally, print the sum of the verteces of the resulting tree.
 ### Problem discussion
 
 Compare the lengths of the two strings.
+
+## F - ???
+Troviamo un problema di DP
