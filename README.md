@@ -40,7 +40,7 @@ Connect a student-vertex to the day-vertex *d* with an edge of capacity 1 if the
 Connect every student to the sink with edges of capacity 2 (rationale: any day shall have at most 2 RA assigned).
 
 Start with the lowest value of *x* possible - which is ceil(m / (n * 2)). Actually, starting with *x* = 1 is also an option and should not make any difference.
-Compute the maximum flow; if the flow value is lower than n * 2 than increment *x* by one and repeat.
+Compute the maximum flow; if the flow value is lower than n * 2 then increment *x* by one and repeat.
 Otherwise you found an acceptable assignment.
 
 ## D - Lost In Translation
@@ -54,9 +54,7 @@ Otherwise you found an acceptable assignment.
 Build the weighted graph of languages and start a BFS from the root node (English).
 
 For each vertex, register its parent language and the distance from English.
-Whenever you find a cheapest connection with the same distance, or a connection with a lower distance, change the parent and update the distance.
-
-Finally, print the sum of the verteces of the resulting treefind a cheapest connection with the same distance, or a connection with a lower distance, change the parent and update the distance.
+Whenever you find a cheaper connection with the same distance, or a connection with a lower distance, change the parent and update the distance.
 
 Finally, print the sum of the verteces of the resulting tree.
 
