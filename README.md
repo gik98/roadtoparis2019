@@ -22,7 +22,10 @@ Just simulate the movements using the appropriate trigonometric formulas.
 
 ### Problem discussion
 
-TODO
+Given that the length of S is <= 100, it can be proven by induction that if S is not a substring of the sequences with 1 <= n <= 10,
+then it doesn't appear as a substring of any longer sequence (the proof is left as a useful exercise to the reader :) ).
+Therefore the solution is to generate the first 10 sequences (the pattern can be easily guessed from the small cases) and check whether
+S is a substring.
 
 ## C - Duty Scheduler
 
@@ -70,3 +73,21 @@ Compare the lengths of the two strings.
 
 ## F - ???
 Troviamo un problema di DP
+
+## G - Boss Battle
+
+[Problem on Kattis](https://open.kattis.com/problems/bossbattle)
+
+[See solution](bossbattle.cpp)
+
+### Problem discussion
+
+If 1 <= n <= 3, one bomb is sufficient as it immediately defeats the boss.
+
+If n > 3, the best strategy is to choose a fixed direction and throw a bomb every second pillar (the first, then the third, and so on),
+because in this way every pillar gets hit and we proceed twice as fast as the boss.
+Let's suppose that we go in the clock-wise direction: the worst case scenario is when at the start the boss is two pillars away in the
+counter clock-wise direction (n-2 pillars in the clock-wise direction). Since we run twice as fast, the number of steps 'x' needed to
+reach the boss can be obtained solving the following trivial equation: (n-2) + x = 2x -> x = n-2.
+
+Hence, the final answer is: max(1, n-2).
