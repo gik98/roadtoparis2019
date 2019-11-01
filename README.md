@@ -71,8 +71,13 @@ Finally, print the sum of the verteces of the resulting tree.
 
 Compare the lengths of the two strings.
 
-## F - ???
-Troviamo un problema di DP
+## F - Ascending photo
+[Problem on Kattis](https://open.kattis.com/problems/ascendingphoto)
+
+[See solution](ascendingphoto)
+
+### Problem discussion
+
 
 ## G - Boss Battle
 
