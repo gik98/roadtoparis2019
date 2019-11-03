@@ -67,6 +67,7 @@ dynamic programming approach.
 Let's root the tree at node 0, and draw the corresponding direct edges. For every node 'x' apart from 0 we compute two values:
 1) The diameter of the subtree whose root is 'x'.
 2) The diameter of the complementary of subtree '1' (the original tree minus the subtree with 'x' as root).
+
 It can be clearly seen that subtrees (1) and (2) are those that are obtained by removing the edge between 'x' and its predecessor,
 and after this removal the length of their diameters will be substituted to d_A and d_B in the formula above.
 
@@ -80,6 +81,7 @@ The diameters of subtrees (2) are instead the maximum between:
    (this is obtained efficiently by precalculating the three longest such paths for every node, in case one of them is passing through 'x').
 4) The sum between the longest path from the predecessor of 'x' to a leaf and the longest path starting from the predecessor of 'x' and
    going "upwards", finishing in a leaf from another subtree.
+   
 The lenghts of the upward paths of case 4 can also be precomputed recursively.
 
 Once we compute the values (1) and (2) for every node, we cycle through them to see which one minimizes the formula:
