@@ -96,3 +96,14 @@ counter clock-wise direction (n-2 pillars in the clock-wise direction). Since we
 reach the boss can be obtained solving the following trivial equation: (n-2) + x = 2x -> x = n-2.
 
 Hence, the final answer is: max(1, n-2).
+
+## H - Sums
+[Problem on Kattis](https://open.kattis.com/problems/consecutivesums)
+
+[See solution](consecutivesums.cpp)
+
+### Problem discussion
+Remark (Gauss formula): 
+```math
+k + (k+1) + .. + (k+n-1) = \frac{n * (k + n - 1)}{2}
+```
