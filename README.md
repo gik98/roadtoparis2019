@@ -65,8 +65,8 @@ efficiently, for every edge, the diameters of the two trees that are created. Th
 dynamic programming approach.
 
 Let's root the tree at node 0, and draw the corresponding direct edges. For every node 'x' apart from 0 we compute two values:
-  (1) The diameter of the subtree whose root is 'x'.
-  (2) The diameter of the complementary of subtree '1' (the original tree minus the subtree with 'x' as root).
+1) The diameter of the subtree whose root is 'x'.
+2) The diameter of the complementary of subtree '1' (the original tree minus the subtree with 'x' as root).
 It can be clearly seen that subtrees (1) and (2) are those that are obtained by removing the edge between 'x' and its predecessor,
 and after this removal the length of their diameters will be substituted to d_A and d_B in the formula above.
 
