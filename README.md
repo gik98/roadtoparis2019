@@ -105,5 +105,13 @@ Hence, the final answer is: max(1, n-2).
 ### Problem discussion
 Remark (Gauss formula): 
 ```math
-k + (k+1) + .. + (k+n-1) = \frac{n * (k + n - 1)}{2}
+k + (k+1) + .. + (k+n-1) = n * (k + n - 1)/2
 ```
+
+Now, let N be the input number, so: 
+
+N = n * (k + n - 1)/2
+
+2N = n * (k + n - 1)
+
+We know that n divides 2N and (k + n - 1) divides 2N. The solutions is to try all the divisors of 2N (in O(sqrt(N))) until one of them makes the equations valid. Of course, if we don't find any valid integer the result is "impossible"; otherwise, n will be the number of summands and k the first summand. The problem requires n to be minimal, to do so we just need to start to try the divisors from 2 and stop when we find the first valid answer.
