@@ -81,7 +81,7 @@ The diameters of subtrees (2) are instead the maximum between:
    (this is obtained efficiently by precalculating the three longest such paths for every node, in case one of them is passing through 'x').
 4) The sum between the longest path from the predecessor of 'x' to a leaf and the longest path starting from the predecessor of 'x' and
    going "upwards", finishing in a leaf from another subtree.
-   
+
 The lenghts of the upward paths of case 4 can also be precomputed recursively.
 
 Once we compute the values (1) and (2) for every node, we cycle through them to see which one minimizes the formula:
@@ -117,7 +117,7 @@ This is a classical assignment problem which could be solved using flow networks
 We have a vertex for every student, a vertex for every day, the sink vertex and the source vertex.
 Connect the source to every student-vertex with edges of capacity *x* (*x* is the maximum number of days on which any RA is assigned).
 Connect a student-vertex to the day-vertex *d* with an edge of capacity 1 if the student is available to fulfill its RA duty on day *d* (rationale: any student could be assigned at most once every day).
-Connect every student to the sink with edges of capacity 2 (rationale: any day shall have at most 2 RA assigned).
+Connect every day-vertex to the sink with edges of capacity 2 (rationale: any day shall have at most 2 RA assigned).
 
 Start with the lowest value of *x* possible - which is ceil(m / (n * 2)). Actually, starting with *x* = 1 is also an option and should not make any difference.
 Compute the maximum flow; if the flow value is lower than n * 2 then increment *x* by one and repeat.
